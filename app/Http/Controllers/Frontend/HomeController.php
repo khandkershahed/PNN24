@@ -107,7 +107,7 @@ class HomeController extends Controller
 
         $news = News::with(['auther', 'tags', 'comments'])->where('slug', $slug)
         ->activeEntries()->withLocalize()->orderBy('id', 'DESC')
-        ->first();
+        ->firstOrFail();
 
         $this->countView($news);
 
@@ -143,7 +143,6 @@ class HomeController extends Controller
 
     public function news(Request $request)
     {
-
         $news = News::query();
 
         $news->when($request->has('tag'), function($query) use ($request){
