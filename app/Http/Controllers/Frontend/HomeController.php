@@ -103,12 +103,11 @@ class HomeController extends Controller
 
     public function ShowNews(string $slug)
     {
-        // dd($slug);
         if(!News::where('slug', $slug)->exists()){
             return redirect()->back()->with('error', 'News not found!');
         }
         $news = News::with(['auther', 'tags', 'comments'])->where('slug', $slug)
-        ->activeEntries()->orderBy('id', 'DESC')
+        ->activeEntries()->withLocalize()->orderBy('id', 'DESC')
         ->firstOrFail();
 
         $this->countView($news);
