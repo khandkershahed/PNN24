@@ -33,18 +33,25 @@ function getLangauge(): string
 {
     if (session()->has('language')) {
         return session('language');
-    } else {
-        try {
-            $language = Language::where('default', 1)->first();
-            setLanguage($language->lang);
+    }
 
-            return $language->lang;
-        } catch (\Throwable $th) {
-            setLanguage('en');
+    try {
+        $language = \App\Models\Language::where('default', 1)->first();
+
+        if ($language && $language->lang) {
+            setLanguage($language->lang);
             return $language->lang;
         }
+    } catch (\Throwable $th) {
+        // Optional: log the exception here
     }
+
+    // Final fallback
+    $fallback = 'en';
+    setLanguage($fallback);
+    return $fallback;
 }
+
 
 /** set language code in session */
 function setLanguage(string $code): void
