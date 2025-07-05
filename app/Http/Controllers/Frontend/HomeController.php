@@ -103,9 +103,9 @@ class HomeController extends Controller
 
     public function ShowNews(string $slug)
     {
-        dd($slug);
+        // dd($slug);
         if(!News::where('slug', $slug)->exists()){
-            return redirect()->back()->with('error', __('frontend.News not found!'));
+            return redirect()->back()->with('error', 'News not found!');
         }
         $news = News::with(['auther', 'tags', 'comments'])->where('slug', $slug)
         ->activeEntries()->withLocalize()->orderBy('id', 'DESC')

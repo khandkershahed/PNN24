@@ -12,22 +12,45 @@ function formatTags(array $tags): String
 }
 
 /** get selected language from session */
+// function getLangauge(): string
+// {
+//     if (session()->has('language')) {
+//         return session('language');
+//     } else {
+//         try {
+//             $language = Language::where('default', 1)->first();
+//             setLanguage($language->lang);
+//             return $language->lang;
+//         } catch (\Throwable $th) {
+//             $fallbackLang = 'bn';
+//             setLanguage($fallbackLang);
+//             return $fallbackLang;
+//         }
+//     }
+// }
+
 function getLangauge(): string
 {
     if (session()->has('language')) {
         return session('language');
-    } else {
-        try {
-            $language = Language::where('default', 1)->first();
+    }
+
+    try {
+        $language = \App\Models\Language::where('default', 1)->first();
+        if ($language && $language->lang) {
             setLanguage($language->lang);
             return $language->lang;
-        } catch (\Throwable $th) {
-            $fallbackLang = 'bn';
-            setLanguage($fallbackLang);
-            return $fallbackLang;
         }
+    } catch (\Throwable $e) {
+        // Optional: Log the error
     }
+
+    // Default fallback
+    $fallback = config('app.fallback_locale', 'en');
+    setLanguage($fallback);
+    return $fallback;
 }
+
 
 /** set language code in session */
 function setLanguage(string $code): void

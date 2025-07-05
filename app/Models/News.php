@@ -19,12 +19,23 @@ class News extends Model
     }
 
     /** scope for check language */
+    // public function scopeWithLocalize($query)
+    // {
+    //     return $query->where([
+    //         'language' => getLangauge()
+    //     ]);
+    // }
+
     public function scopeWithLocalize($query)
     {
-        return $query->where([
-            'language' => getLangauge()
-        ]);
+        $lang = getLangauge();
+
+        return $query->where(function ($q) use ($lang) {
+            $q->where('language', $lang)
+                ->orWhere('language', 'en'); // fallback to English
+        });
     }
+
 
     public function category()
     {
