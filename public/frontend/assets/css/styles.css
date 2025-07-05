@@ -16094,7 +16094,8 @@ input[type="number"] {
     position: absolute;
     padding: 10px 0;
     width: 100%;
-    z-index: 51;
+    /* z-index: 51; */
+    z-index: 9999;
     display: none
 }
 
