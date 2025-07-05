@@ -1,7 +1,8 @@
 <?php
 
-use App\Models\Language;
 use App\Models\Setting;
+use App\Models\Language;
+use Illuminate\Support\Str;
 use PhpParser\Node\Expr\Cast\String_;
 
 /** format news tags */
@@ -63,7 +64,7 @@ function setLanguage(string $code): void
 
 function truncate(string $text, int $limit = 45): String
 {
-    return \Str::limit($text, $limit, '...');
+    return Str::limit($text, $limit, '...');
 }
 
 /** Convert a number in K format */

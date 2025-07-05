@@ -42,31 +42,31 @@ class HomeController extends Controller
 
         $HomeSectionSetting = HomeSectionSetting::where('language', getLangauge())->first();
 
-        if($HomeSectionSetting){
+        if ($HomeSectionSetting) {
             $categorySectionOne = News::where('category_id', $HomeSectionSetting->category_section_one)
                 ->activeEntries()->withLocalize()
                 ->latest('id')
                 ->take(8)
                 ->get();
 
-        $categorySectionTwo = News::where('category_id', $HomeSectionSetting->category_section_two)
-            ->activeEntries()->withLocalize()
-            ->latest('id')
-            ->take(8)
-            ->get();
+            $categorySectionTwo = News::where('category_id', $HomeSectionSetting->category_section_two)
+                ->activeEntries()->withLocalize()
+                ->latest('id')
+                ->take(8)
+                ->get();
 
-        $categorySectionThree = News::where('category_id', $HomeSectionSetting->category_section_three)
-            ->activeEntries()->withLocalize()
-            ->latest('id')
-            ->take(6)
-            ->get();
+            $categorySectionThree = News::where('category_id', $HomeSectionSetting->category_section_three)
+                ->activeEntries()->withLocalize()
+                ->latest('id')
+                ->take(6)
+                ->get();
 
-        $categorySectionFour = News::where('category_id', $HomeSectionSetting->category_section_four)
-            ->activeEntries()->withLocalize()
-            ->latest('id')
-            ->take(4)
-            ->get();
-        }else {
+            $categorySectionFour = News::where('category_id', $HomeSectionSetting->category_section_four)
+                ->activeEntries()->withLocalize()
+                ->latest('id')
+                ->take(4)
+                ->get();
+        } else {
             $categorySectionOne = collect();
             $categorySectionTwo = collect();
             $categorySectionThree = collect();
@@ -103,16 +103,17 @@ class HomeController extends Controller
 
     public function ShowNews(string $slug)
     {
-        if(!News::where('slug', $slug)->exists()){
+
+        if (!News::where('slug', $slug)->exists()) {
             return redirect()->back()->with('error', 'News not found!');
         }
         $news = News::with(['auther', 'tags', 'comments'])->where('slug', $slug)
-        ->activeEntries()->withLocalize()->orderBy('id', 'DESC')
-        ->firstOrFail();
-
+            ->activeEntries()->orderBy('id', 'DESC')
+            ->firstOrFail();
+        setLanguage($news->language);
         $this->countView($news);
 
-        $recentNews = News::with(['category', 'auther'])->where('slug','!=', $news->slug)
+        $recentNews = News::with(['category', 'auther'])->where('slug', '!=', $news->slug)
             ->activeEntries()->withLocalize()->orderBy('id', 'DESC')->take(4)->get();
 
         $mostCommonTags = $this->mostCommonTags();
@@ -139,31 +140,31 @@ class HomeController extends Controller
 
         $ad = Ad::first();
 
-       return view('frontend.news-details', compact('news', 'recentNews', 'mostCommonTags', 'nextPost', 'previousPost', 'relatedPosts', 'socialCounts', 'ad'));
+        return view('frontend.news-details', compact('news', 'recentNews', 'mostCommonTags', 'nextPost', 'previousPost', 'relatedPosts', 'socialCounts', 'ad'));
     }
 
     public function news(Request $request)
     {
         $news = News::query();
 
-        $news->when($request->has('tag'), function($query) use ($request){
-            $query->whereHas('tags', function($query) use ($request){
+        $news->when($request->has('tag'), function ($query) use ($request) {
+            $query->whereHas('tags', function ($query) use ($request) {
                 $query->where('name', $request->tag);
             });
         });
 
-        $news->when($request->has('category') && !empty($request->category), function($query) use ($request) {
-            $query->whereHas('category', function($query) use ($request) {
+        $news->when($request->has('category') && !empty($request->category), function ($query) use ($request) {
+            $query->whereHas('category', function ($query) use ($request) {
                 $query->where('slug', $request->category);
             });
         });
 
-        $news->when($request->has('search'), function($query) use ($request) {
-            $query->where(function($query) use ($request){
-                $query->where('title', 'like','%'.$request->search.'%')
-                    ->orWhere('content', 'like','%'.$request->search.'%');
-            })->orWhereHas('category', function($query) use ($request){
-                $query->where('name', 'like','%'.$request->search.'%');
+        $news->when($request->has('search'), function ($query) use ($request) {
+            $query->where(function ($query) use ($request) {
+                $query->where('title', 'like', '%' . $request->search . '%')
+                    ->orWhere('content', 'like', '%' . $request->search . '%');
+            })->orWhereHas('category', function ($query) use ($request) {
+                $query->where('name', 'like', '%' . $request->search . '%');
             });
         });
 
@@ -183,20 +184,18 @@ class HomeController extends Controller
 
     public function countView($news)
     {
-        if(session()->has('viewed_posts')){
+        if (session()->has('viewed_posts')) {
             $postIds = session('viewed_posts');
 
-            if(!in_array($news->id, $postIds)){
+            if (!in_array($news->id, $postIds)) {
                 $postIds[] = $news->id;
                 $news->increment('views');
             }
             session(['viewed_posts' => $postIds]);
-
-        }else {
+        } else {
             session(['viewed_posts' => [$news->id]]);
 
             $news->increment('views');
-
         }
     }
 
@@ -248,7 +247,7 @@ class HomeController extends Controller
     public function commentDestory(Request $request)
     {
         $comment = Comment::findOrFail($request->id);
-        if(Auth::user()->id === $comment->user_id){
+        if (Auth::user()->id === $comment->user_id) {
             $comment->delete();
             return response(['status' => 'success', 'message' => __('frontend.Deleted Successfully!')]);
         }
@@ -258,18 +257,17 @@ class HomeController extends Controller
 
     public function SubscribeNewsLetter(Request $request)
     {
-       $request->validate([
-        'email' => ['required', 'email', 'max:255', 'unique:subscribers,email']
-       ],[
-        'email.unique' => __('frontend.Email is already subscribed!')
-       ]);
+        $request->validate([
+            'email' => ['required', 'email', 'max:255', 'unique:subscribers,email']
+        ], [
+            'email.unique' => __('frontend.Email is already subscribed!')
+        ]);
 
-       $subscriber = new Subscriber();
-       $subscriber->email = $request->email;
-       $subscriber->save();
+        $subscriber = new Subscriber();
+        $subscriber->email = $request->email;
+        $subscriber->save();
 
-       return response(['status' => 'success', 'message' => __('frontend.Subscribed successfully!')]);
-
+        return response(['status' => 'success', 'message' => __('frontend.Subscribed successfully!')]);
     }
 
     public function about()
@@ -293,7 +291,7 @@ class HomeController extends Controller
             'message' => ['required', 'max:500']
         ]);
 
-        try{
+        try {
             $toMail = Contact::where('language', 'en')->first();
 
             /** Send Mail */
@@ -306,8 +304,7 @@ class HomeController extends Controller
             $mail->subject = $request->subject;
             $mail->message = $request->message;
             $mail->save();
-
-        }catch(\Exception $e){
+        } catch (\Exception $e) {
             toast(__($e->getMessage()));
         }
 
