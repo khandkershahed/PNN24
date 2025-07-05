@@ -22,7 +22,7 @@ function getLangauge(): string
             setLanguage($language->lang);
             return $language->lang;
         } catch (\Throwable $th) {
-            $fallbackLang = 'en';
+            $fallbackLang = 'bn';
             setLanguage($fallbackLang);
             return $fallbackLang;
         }
