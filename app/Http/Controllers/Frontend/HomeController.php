@@ -108,7 +108,7 @@ class HomeController extends Controller
             return redirect()->back()->with('error', 'News not found!');
         }
         $news = News::with(['auther', 'tags', 'comments'])->where('slug', $slug)
-        ->activeEntries()->withLocalize()->orderBy('id', 'DESC')
+        ->activeEntries()->orderBy('id', 'DESC')
         ->firstOrFail();
 
         $this->countView($news);
