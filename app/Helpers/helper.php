@@ -12,6 +12,23 @@ function formatTags(array $tags): String
 }
 
 /** get selected language from session */
+// function getLangauge(): string
+// {
+//     if (session()->has('language')) {
+//         return session('language');
+//     } else {
+//         try {
+//             $language = Language::where('default', 1)->first();
+//             setLanguage($language->lang);
+//             return $language->lang;
+//         } catch (\Throwable $th) {
+//             $fallbackLang = 'en';
+//             setLanguage($fallbackLang);
+//             return $fallbackLang;
+//         }
+//     }
+// }
+
 function getLangauge(): string
 {
     if (session()->has('language')) {
@@ -20,11 +37,11 @@ function getLangauge(): string
         try {
             $language = Language::where('default', 1)->first();
             setLanguage($language->lang);
+
             return $language->lang;
         } catch (\Throwable $th) {
-            $fallbackLang = 'en';
-            setLanguage($fallbackLang);
-            return $fallbackLang;
+            setLanguage('en');
+            return $language->lang;
         }
     }
 }
