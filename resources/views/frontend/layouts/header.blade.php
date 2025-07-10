@@ -152,42 +152,44 @@
         <div class="modal-dialog modal-dialog-aside" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="widget__form-search-bar">
-                                <form action="{{ route('news') }}" method="GET">
-                                    <div class="row no-gutters">
-                                        <div class="col">
-                                            <input class="form-control border-secondary border-right-0 rounded-0"
-                                                value="" placeholder="Search" type="search" name="search">
-                                        </div>
-                                        <div class="col-auto">
-                                            <button type="submit"
-                                                class="btn btn-outline-secondary border-left-0 rounded-0 rounded-right">
-                                                <i class="fa fa-search"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </form>
+                    <div class="widget__form-search-bar  ">
+                        <form action="{{ route('news') }}" method="GET">
+                            <div class="row no-gutters">
+                                <div class="col">
+                                    <input class="form-control border-secondary border-right-0 rounded-0" value=""
+                                        placeholder="Search" type="search" name="search">
+                                </div>
+                                <div class="col-auto">
+                                    <button type="submit"
+                                        class="btn btn-outline-secondary border-left-0 rounded-0 rounded-right">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                </div>
                             </div>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="col-12">
-                            <select class="form-control select site-language">
-                                @foreach ($languages as $language)
-                                    <option value="{{ $language->lang }}"
-                                        {{ getLangauge() === $language->lang ? 'selected' : '' }}>{{ $language->name }}
-                                    </option>
-                                @endforeach
-                            </select>
-                        </div>
+                        </form>
                     </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
                 <div class="modal-body">
+                    <div>
+                        <select class="site-language">
+                            @foreach ($languages as $language)
+                                <option value="{{ $language->lang }}"
+                                    {{ getLangauge() === $language->lang ? 'selected' : '' }}>{{ $language->name }}
+                                </option>
+                            @endforeach
+                        </select>
+                    </div>
+                    <hr>
                     <nav class="list-group list-group-flush">
                         <ul class="navbar-nav ">
+                            {{-- <li class="nav-item">
+                                <a class="nav-link active text-dark" href="{{ route('news') }}">
+                                    All News
+                                </a>
+                            </li> --}}
                             @foreach ($FeaturedCategories as $category)
                                 <li class="nav-item">
                                     <a class="nav-link active text-dark"

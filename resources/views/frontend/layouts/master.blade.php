@@ -64,6 +64,11 @@
             --colorPrimary: {{ $settings['site_color'] }};
         }
 
+        .site-language{
+            width: 150px;
+            text-align: center;
+        }
+
         .site-language option {
             /* Some allowed styling like color or background */
             color: black;
