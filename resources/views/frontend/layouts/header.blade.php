@@ -210,7 +210,7 @@
                     <hr>
 
                     <div class="widget__form-search-bar">
-                        <select class="form-select site-language">
+                        <select class="form-control select site-language">
                             @foreach ($languages as $language)
                                 <option value="{{ $language->lang }}"
                                     {{ getLangauge() === $language->lang ? 'selected' : '' }}>{{ $language->name }}
