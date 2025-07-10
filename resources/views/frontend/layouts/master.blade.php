@@ -53,7 +53,7 @@
             --colorPrimary: {{ $settings['site_color'] }};
         }
     </style>
-    @if (session(['language' == 'bn']))
+    @if (session('language') === 'bn')
         <style>
             .navbar-soft .navbar-nav .nav-link {
                 font-weight: 600;
@@ -62,6 +62,7 @@
             }
         </style>
     @endif
+
 </head>
 
 <body>
