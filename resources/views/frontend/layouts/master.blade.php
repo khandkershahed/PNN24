@@ -149,6 +149,10 @@
                     }
                 })
             })
+            $('.site-language').select2({
+                dropdownParent: $('#modal_aside_right')
+            });
+
             $('.site-language').on('change', function() {
                 let languageCode = $(this).val();
                 $.ajax({
