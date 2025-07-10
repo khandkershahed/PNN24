@@ -6,7 +6,7 @@
 <div class="main-sidebar sidebar-style-2">
     <aside id="sidebar-wrapper">
         <div class="sidebar-brand">
-            <a href="{{ route('admin.dashboard') }}">{{ __('admin.PNN24') }}</a>
+            <a href="{{ route('admin.dashboard') }}">{{ __('admin.PNN24 News') }}</a>
         </div>
         <div class="sidebar-brand sidebar-brand-sm">
             <a href="{{ route('admin.dashboard') }}">{{ __('admin.PJ') }}</a>

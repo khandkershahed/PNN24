@@ -1,6 +1,7 @@
 <?php
 
 return array (
+  'PNN24 News' => 'PNN24 News',
   'About Page' => 'About Page',
   'About Content' => 'About Content',
   'Save' => 'Save',
