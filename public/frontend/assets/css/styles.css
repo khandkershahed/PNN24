@@ -16531,13 +16531,10 @@ body.offcanvas-active {
 .navbar-soft .navbar-nav .nav-link {
     padding: 2rem 0.5rem;
     font-weight: 700;
-    /* font-weight: 600; */
     text-transform: uppercase;
     color: var(--colorBlack);
     border: 2px solid transparent;
-    font-family: "Poppins", sans-serif;
-    letter-spacing: 1px;
-    font-size: 16px;
+    font-family: "Poppins", sans-serif
 }
 
 .navbar-soft .navbar-nav .nav-link:hover {

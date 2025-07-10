@@ -53,6 +53,15 @@
             --colorPrimary: {{ $settings['site_color'] }};
         }
     </style>
+    @if (session(['language' == 'bn']))
+        <style>
+            .navbar-soft .navbar-nav .nav-link {
+                font-weight: 600;
+                letter-spacing: 1px;
+                font-size: 16px;
+            }
+        </style>
+    @endif
 </head>
 
 <body>
