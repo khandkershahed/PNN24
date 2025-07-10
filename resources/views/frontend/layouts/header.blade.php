@@ -156,8 +156,8 @@
                         <form action="{{ route('news') }}" method="GET">
                             <div class="row no-gutters">
                                 <div class="col">
-                                    <input class="form-control border-secondary border-right-0 rounded-0"
-                                        value="" placeholder="Search" type="search" name="search">
+                                    <input class="form-control border-secondary border-right-0 rounded-0" value=""
+                                        placeholder="Search" type="search" name="search">
                                 </div>
                                 <div class="col-auto">
                                     <button type="submit"
@@ -207,6 +207,15 @@
                         </ul>
 
                     </nav>
+                    <div class="topbar_language ">
+                        <select id="site-language">
+                            @foreach ($languages as $language)
+                                <option value="{{ $language->lang }}"
+                                    {{ getLangauge() === $language->lang ? 'selected' : '' }}>{{ $language->name }}
+                                </option>
+                            @endforeach
+                        </select>
+                    </div>
                 </div>
 
             </div>
