@@ -35,6 +35,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="{{ asset($settings['site_favicon']) }}" type="image/png">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
+
+
+
     {{-- <link href="{{ asset('frontend/assets/css/custom.css') }}" rel="stylesheet"> --}}
     @if (session('language') === 'bn')
         <link href="{{ asset('frontend/assets/css/styles_bangla.css?v=' . time()) }}" rel="stylesheet">
@@ -66,11 +71,11 @@
 
         .site-language{
             width: 150px;
+            height: 40px;
             text-align: center;
         }
 
         .site-language option {
-            /* Some allowed styling like color or background */
             color: black;
             background-color: white;
         }
@@ -118,7 +123,7 @@
     <script type="text/javascript" src="{{ asset('frontend/assets/js/index.bundle.js') }}"></script>
     @include('sweetalert::alert')
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script>
         const Toast = Swal.mixin({
             toast: true,

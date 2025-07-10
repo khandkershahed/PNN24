@@ -16117,7 +16117,9 @@ input[type="number"] {
 
 .modal-header .close {
     padding: 1rem 1rem;
-    margin: 0rem -3.8rem -1rem auto;
+    margin: -1rem -4.05rem -1rem auto;
+    background: #d62828;
+    /* margin: 0rem -3.8rem -1rem auto; */
     color: #fff;
     opacity: 1
 }
