@@ -63,6 +63,12 @@
         :root {
             --colorPrimary: {{ $settings['site_color'] }};
         }
+
+        select.site-language option {
+            /* Some allowed styling like color or background */
+            color: black;
+            background-color: white;
+        }
     </style>
 
 
