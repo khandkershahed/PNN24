@@ -36,7 +36,18 @@
     <link rel="icon" href="{{ asset($settings['site_favicon']) }}" type="image/png">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
     {{-- <link href="{{ asset('frontend/assets/css/custom.css') }}" rel="stylesheet"> --}}
-    <link href="{{ asset('frontend/assets/css/styles.css?v=' . time()) }}" rel="stylesheet">
+    @if (session('language') === 'bn')
+        <link href="{{ asset('frontend/assets/css/styles_bangla.css?v=' . time()) }}" rel="stylesheet">
+        <style>
+            .navbar-soft .navbar-nav .nav-link {
+                font-weight: 600;
+                letter-spacing: 1px;
+                font-size: 16px;
+            }
+        </style>
+    @else
+        <link href="{{ asset('frontend/assets/css/styles.css?v=' . time()) }}" rel="stylesheet">
+    @endif
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-3J5T3JJVFH"></script>
     <script>
@@ -53,15 +64,7 @@
             --colorPrimary: {{ $settings['site_color'] }};
         }
     </style>
-    @if (session('language') === 'bn')
-        <style>
-            .navbar-soft .navbar-nav .nav-link {
-                font-weight: 600;
-                letter-spacing: 1px;
-                font-size: 16px;
-            }
-        </style>
-    @endif
+
 
 </head>
 
