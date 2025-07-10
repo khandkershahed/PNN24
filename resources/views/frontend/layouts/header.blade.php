@@ -152,7 +152,7 @@
         <div class="modal-dialog modal-dialog-aside" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <div class="widget__form-search-bar  ">
+                    <div class="widget__form-search-bar">
                         <form action="{{ route('news') }}" method="GET">
                             <div class="row no-gutters">
                                 <div class="col">
@@ -207,7 +207,8 @@
                         </ul>
 
                     </nav>
-                    <div class="topbar_language ">
+                    <hr>
+                    <div class="widget__form-search-bar">
                         <select id="site-language">
                             @foreach ($languages as $language)
                                 <option value="{{ $language->lang }}"
