@@ -1,12 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
-@font-face {
-    font-family: 'siyam_rupaliregular';
-    src: url('../font/siyamrupali-webfont.woff2') format('woff2'),
-         url('../font/siyamrupali-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
 
-}
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700,700i&display=swap);
 @import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500,900);
@@ -268,8 +261,7 @@ img {
     --breakpoint-lg: 992px;
     --breakpoint-xl: 1200px;
     --font-family-sans-serif: Montserrat, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-    --font-family-bangla: 'siyam_rupaliregular', sans-serif;
+    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace
 }
 
 *,
@@ -279,8 +271,7 @@ img {
 }
 
 html {
-    font-family: 'siyam_rupaliregular', sans-serif;
-    /* font-family: sans-serif; */
+    font-family: sans-serif;
     line-height: 1.15;
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
@@ -301,8 +292,7 @@ section {
 
 body {
     margin: 0;
-    /* font-family: Montserrat, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; */
-    font-family: 'siyam_rupaliregular', sans-serif;
+    font-family: Montserrat, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
@@ -11010,13 +11000,13 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'siyam_rupaliregular', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-weight: 700;
     color: var(--colorBlack)
 }
 
 p {
-    font-family: 'siyam_rupaliregular', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-weight: 500;
     margin-bottom: 1.5em
 }
@@ -11142,7 +11132,7 @@ blockquote footer {
     font-size: 16px;
     line-height: 1.7;
     letter-spacing: 1.4px;
-    font-family: 'siyam_rupaliregular', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-weight: 700;
     text-transform: uppercase
 }
@@ -11369,7 +11359,7 @@ blockquote footer {
 
 .btn {
     font-size: 13px;
-    font-family: 'siyam_rupaliregular', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-weight: 600;
     border-radius: 30px;
 }
@@ -12231,7 +12221,7 @@ input[type="number"] {
 .widget__category .widget__title h5 {
     color: #fff;
     text-transform: capitalize;
-    font-family: 'siyam_rupaliregular', sans-serif;
+    font-family: "Montserrat", sans-serif;
     margin-bottom: 0
 }
 
@@ -12275,7 +12265,7 @@ input[type="number"] {
     text-transform: uppercase;
     font-size: 11px;
     letter-spacing: 1px;
-    font-family: 'siyam_rupaliregular', sans-serif;
+    font-family: "Montserrat", sans-serif;
     border-radius: 30px;
 }
 
@@ -12435,7 +12425,7 @@ input[type="number"] {
     background: var(--colorPrimary);
     line-height: 15px;
     text-transform: uppercase;
-    font-family: 'siyam_rupaliregular', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-weight: 600;
     border-radius: 30px;
 }
@@ -12493,7 +12483,7 @@ input[type="number"] {
 .card__post .card__post__body .card__post__content .card__post__author-info {
     font-size: 12px;
     font-weight: 700;
-    font-family: 'siyam_rupaliregular', sans-serif;
+    font-family: "Montserrat", sans-serif;
     line-height: 1;
     margin: 0;
     padding: 0;
@@ -12745,7 +12735,7 @@ input[type="number"] {
     background: linear-gradient(285deg, #f92a28 27%, #da1752 100%, #fff 100%);
     line-height: 15px;
     text-transform: uppercase;
-    font-family: 'siyam_rupaliregular', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-weight: 600
 }
 
@@ -13184,7 +13174,7 @@ input[type="number"] {
     background: var(--colorPrimary) !important;
     line-height: 15px;
     text-transform: uppercase;
-    font-family: 'siyam_rupaliregular', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-weight: 600;
     border-radius: 30px;
 }
@@ -13349,7 +13339,7 @@ input[type="number"] {
 .article__entry-new .articel__content .article__post__author li span {
     font-size: 14px;
     text-transform: capitalize;
-    font-family: 'siyam_rupaliregular', sans-serif;
+    font-family: "Montserrat", sans-serif;
     color: #212529
 }
 
@@ -13855,7 +13845,7 @@ input[type="number"] {
     margin-right: 8px;
     background-color: #eee;
     border-radius: 50%;
-    font-family: 'siyam_rupaliregular', sans-serif;
+    font-family: "Montserrat", sans-serif;
     color: var(--colorPrimary);
     border-bottom: 2px solid var(--colorPrimary);
 }
@@ -13878,7 +13868,7 @@ input[type="number"] {
     background: var(--colorPrimary);
     line-height: 15px;
     text-transform: uppercase;
-    font-family: 'siyam_rupaliregular', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-weight: 600;
     border-radius: 30px;
 }
@@ -14066,7 +14056,7 @@ input[type="number"] {
     text-transform: uppercase;
     color: #6c757d;
     letter-spacing: 1px;
-    font-family: 'siyam_rupaliregular', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 12px;
     font-weight: 700;
     margin-bottom: 5px
@@ -14144,7 +14134,7 @@ input[type="number"] {
 
 .comments-area .comment-body .reply a {
     color: #fff;
-    font-family: 'siyam_rupaliregular', sans-serif;
+    font-family: "Montserrat", sans-serif;
     display: inline-block;
     padding: 5px 20px 6px;
     background: var(--colorPrimary);
@@ -14209,7 +14199,7 @@ input[type="number"] {
 }
 
 .comments-area .comment-metadata a {
-    font-family: 'siyam_rupaliregular', sans-serif;
+    font-family: "Montserrat", sans-serif;
     color: #495057
 }
 
@@ -14563,7 +14553,7 @@ input[type="number"] {
 
 .wrap__masonary-card .card .masonary__category span a {
     text-transform: uppercase;
-    font-family: 'siyam_rupaliregular', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 11px;
     line-height: 15px;
     color: #fff
@@ -14614,7 +14604,7 @@ input[type="number"] {
 
 .wrap__masonary-card .card .masonary__title-info-author .list-inline .list-inline-item span {
     color: #fff;
-    font-family: 'siyam_rupaliregular', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 12px;
     font-weight: 600
 }
@@ -14658,7 +14648,7 @@ input[type="number"] {
 
 .wrap__masonary-card .card .masonary__title-info-author-card .list-inline .list-inline-item span {
     color: var(--colorBlack);
-    font-family: 'siyam_rupaliregular', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 12px;
     font-weight: 600
 }
@@ -15008,7 +14998,7 @@ input[type="number"] {
 }
 
 .trending-news .trending-news-inner .trending-news-slider .item-single a {
-    font-family: 'siyam_rupaliregular', sans-serif;
+    font-family: "Montserrat", sans-serif;
     color: var(--colorBlack);
     font-weight: 600;
     line-height: 34px;
@@ -16541,10 +16531,13 @@ body.offcanvas-active {
 .navbar-soft .navbar-nav .nav-link {
     padding: 2rem 0.5rem;
     font-weight: 700;
+    /* font-weight: 600; */
     text-transform: uppercase;
     color: var(--colorBlack);
     border: 2px solid transparent;
-    font-family: "Poppins", sans-serif
+    font-family: "Poppins", sans-serif;
+    letter-spacing: 1px;
+    font-size: 16px;
 }
 
 .navbar-soft .navbar-nav .nav-link:hover {
@@ -16714,7 +16707,7 @@ body.offcanvas-active {
     text-transform: capitalize;
     font-weight: 700;
     font-size: 14px;
-    font-family: 'siyam_rupaliregular', sans-serif;
+    font-family: "Montserrat", sans-serif;
     color: #fff
 }
 
@@ -16748,7 +16741,7 @@ body.offcanvas-active {
 
 .wrapper__footer .list-unstyled a {
     color: #fff;
-    font-family: 'siyam_rupaliregular', sans-serif;
+    font-family: "Montserrat", sans-serif;
     text-transform: capitalize;
     font-size: 14px;
     line-height: 35px;
@@ -16792,7 +16785,7 @@ body.offcanvas-active {
 
 .wrapper__footer .social__media .list-inline span {
     color: #fff;
-    font-family: 'siyam_rupaliregular', sans-serif;
+    font-family: "Montserrat", sans-serif;
     text-transform: capitalize;
     font-size: 11px;
     font-weight: 700;
@@ -16851,7 +16844,7 @@ body.offcanvas-active {
 }
 
 .bg__footer-bottom .list-inline .list-inline-item a {
-    font-family: 'siyam_rupaliregular', sans-serif;
+    font-family: "Montserrat", sans-serif;
     color: #fff;
     font-size: 12px;
     font-weight: 600;
@@ -16890,7 +16883,7 @@ body.offcanvas-active {
 .bg__footer-bottom-section .list-inline .list-inline-item a {
     color: #fff;
     font-size: 13px;
-    font-family: 'siyam_rupaliregular', sans-serif;
+    font-family: "Montserrat", sans-serif;
     text-transform: capitalize
 }
 
@@ -17246,7 +17239,7 @@ body.offcanvas-active {
 
 .wrap__article-detail-info .list-inline .list-inline-item span,
 .wrap__article-detail-info .list-inline .list-inline-item a {
-    font-family: 'siyam_rupaliregular', sans-serif;
+    font-family: "Montserrat", sans-serif;
     text-transform: capitalize;
     font-weight: 600;
     font-size: 14px;
@@ -17318,7 +17311,7 @@ body.offcanvas-active {
 
 .wrap__article-detail-content .total-views .list-inline span.share {
     font-size: 15px;
-    font-family: 'siyam_rupaliregular', sans-serif;
+    font-family: "Montserrat", sans-serif;
     text-transform: capitalize;
     font-weight: 700;
     color: #343a40;
@@ -17407,7 +17400,7 @@ body.offcanvas-active {
 .wrap__article-detail-content .total-views .list-inline .list-inline-item .telegram span,
 .wrap__article-detail-content .total-views .list-inline .list-inline-item .linkedin span {
     color: #fff;
-    font-family: 'siyam_rupaliregular', sans-serif;
+    font-family: "Montserrat", sans-serif;
     text-transform: capitalize;
     font-weight: 600;
     font-size: 12px;
@@ -17483,7 +17476,7 @@ body.offcanvas-active {
 
 .single_navigation-next a,
 .single_navigation-prev a {
-    font-family: 'siyam_rupaliregular', sans-serif;
+    font-family: "Montserrat", sans-serif;
     color: var(--colorBlack);
     font-weight: 600
 }
@@ -17586,7 +17579,7 @@ body.offcanvas-active {
 }
 
 .team-member .member figcaption small {
-    font-family: 'siyam_rupaliregular', sans-serif;
+    font-family: "Montserrat", sans-serif;
     margin-bottom: 20px;
     display: block;
 }
@@ -17629,12 +17622,12 @@ body.offcanvas-active {
 }
 
 .wrap__contact-form .form-group label {
-    font-family: 'siyam_rupaliregular', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-weight: 600
 }
 
 .wrap__contact-form .form-group input {
-    font-family: 'siyam_rupaliregular', sans-serif;
+    font-family: "Montserrat", sans-serif;
     text-transform: capitalize;
     border-radius: 30px;
 }
@@ -17646,7 +17639,7 @@ body.offcanvas-active {
 .wrap__contact-form .wrap__contact-form-office .list-unstyled li {
     display: flex;
     margin-bottom: 15px;
-    font-family: 'siyam_rupaliregular', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-weight: 500
 }
 
