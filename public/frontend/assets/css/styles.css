@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@font-face {
+    font-family: 'siyam_rupaliregular';
+    src: url('../font/siyamrupali-webfont.woff2') format('woff2'),
+         url('../font/siyamrupali-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 
+}
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700,700i&display=swap);
 @import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500,900);
@@ -261,7 +268,8 @@ img {
     --breakpoint-lg: 992px;
     --breakpoint-xl: 1200px;
     --font-family-sans-serif: Montserrat, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace
+    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --font-family-bangla: 'siyam_rupaliregular', sans-serif;
 }
 
 *,
@@ -271,7 +279,8 @@ img {
 }
 
 html {
-    font-family: sans-serif;
+    font-family: 'siyam_rupaliregular', sans-serif;
+    /* font-family: sans-serif; */
     line-height: 1.15;
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
@@ -292,7 +301,8 @@ section {
 
 body {
     margin: 0;
-    font-family: Montserrat, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    /* font-family: Montserrat, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; */
+    font-family: 'siyam_rupaliregular', sans-serif;
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
