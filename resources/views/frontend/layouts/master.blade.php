@@ -149,6 +149,24 @@
                     }
                 })
             })
+            $('.site-language').on('change', function() {
+                let languageCode = $(this).val();
+                $.ajax({
+                    method: 'GET',
+                    url: "{{ route('language') }}",
+                    data: {
+                        language_code: languageCode
+                    },
+                    success: function(data) {
+                        if (data.status === 'success') {
+                            window.location.href = "{{ url('/') }}";
+                        }
+                    },
+                    error: function(data) {
+                        console.error(data);
+                    }
+                })
+            })
 
             /** Subscribe Newsletter**/
             $('.newsletter-form').on('submit', function(e) {
