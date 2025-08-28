@@ -35,10 +35,11 @@
     <link rel="icon" href="{{ asset($settings['site_favicon']) }}" type="image/png">
     {{-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"> --}}
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-    <link href="{{ asset('frontend/assets/css/fontawesome.css') }}" rel="stylesheet">
+    {{-- <link href="{{ asset('frontend/assets/css/fontawesome.css') }}" rel="stylesheet"> --}}
     {{-- <link href="{{ asset('frontend/assets/css/custom.css') }}" rel="stylesheet"> --}}
     @if (session('language') === 'bn')
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+            rel="stylesheet">
         <link href="{{ asset('frontend/assets/css/styles_bangla.css?v=' . time()) }}" rel="stylesheet">
         <style>
             .navbar-soft .navbar-nav .nav-link {
@@ -66,7 +67,7 @@
             --colorPrimary: {{ $settings['site_color'] }};
         }
 
-        .site-language{
+        .site-language {
             width: 150px;
             height: 40px;
             text-align: center;
@@ -120,7 +121,7 @@
     <script type="text/javascript" src="{{ asset('frontend/assets/js/index.bundle.js') }}"></script>
     @include('sweetalert::alert')
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script>
         const Toast = Swal.mixin({
             toast: true,
