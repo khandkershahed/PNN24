@@ -38,6 +38,7 @@
     <link href="{{ asset('frontend/assets/css/fontawesome.css') }}" rel="stylesheet">
     {{-- <link href="{{ asset('frontend/assets/css/custom.css') }}" rel="stylesheet"> --}}
     @if (session('language') === 'bn')
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
         <link href="{{ asset('frontend/assets/css/styles_bangla.css?v=' . time()) }}" rel="stylesheet">
         <style>
             .navbar-soft .navbar-nav .nav-link {
