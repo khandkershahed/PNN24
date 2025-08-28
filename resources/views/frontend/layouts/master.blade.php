@@ -35,7 +35,7 @@
     <link rel="icon" href="{{ asset($settings['site_favicon']) }}" type="image/png">
     {{-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"> --}}
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-    {{-- <link href="{{ asset('frontend/assets/css/fontawesome.css') }}" rel="stylesheet"> --}}
+    <link href="{{ asset('frontend/assets/css/fontawesome.css') }}" rel="stylesheet">
     {{-- <link href="{{ asset('frontend/assets/css/custom.css') }}" rel="stylesheet"> --}}
     @if (session('language') === 'bn')
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
