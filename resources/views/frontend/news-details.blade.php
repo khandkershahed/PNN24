@@ -173,7 +173,7 @@
                     <!-- Profile author -->
                     <div class="wrap__profile">
                         <div class="wrap__profile-author">
-                            <figure>
+                            <figure class="mb-0">
                                 <img style="width: 200px;height: 200px;object-fit: cover;"
                                     src="{{ asset($news->auther->image) }}" alt=""
                                     class="img-fluid rounded-circle">
