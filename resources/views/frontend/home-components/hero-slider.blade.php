@@ -8,7 +8,7 @@
                         <div class="card__post-carousel px-2">
                             @foreach ($heroSlider as $slider)
                                 @if ($loop->index <= 4)
-                                    <div class="item">
+                                    <div class="item" style="width:815px !important;">
                                         <!-- Post Article -->
                                         <div class="card__post">
                                             <div class="card__post__body">
