@@ -17,9 +17,9 @@
                                                         alt="">
                                                 </a>
                                                 <div class="card__post__content bg__post-cover">
-                                                    <div class="card__post__category">
+                                                    {{-- <div class="card__post__category">
                                                         {{ $slider->category->name }}
-                                                    </div>
+                                                    </div> --}}
                                                     <div class="card__post__title">
                                                         <h2>
                                                             <a href="{{ route('news-details', $slider->slug) }}">
@@ -36,8 +36,11 @@
                                                             </li> --}}
                                                             <li class="list-inline-item">
                                                                 <span>
-
-                                                                    {{ date('M d, Y', strtotime($slider->created_at)) }}
+                                                                    @if (session('language') === 'bn')
+                                                                        {{ convertToFullBanglaDate($slider->created_at) }}
+                                                                    @else
+                                                                        {{ date('M d, Y', strtotime($slider->created_at)) }}
+                                                                    @endif
                                                                 </span>
                                                             </li>
                                                         </ul>
@@ -61,9 +64,9 @@
                                                 <img src="{{ asset($slider->image) }}" class="img-fluid" alt="">
                                             </a>
                                             <div class="card__post__content bg__post-cover">
-                                                <div class="card__post__category">
+                                                {{-- <div class="card__post__category">
                                                     {{ $slider->category->name }}
-                                                </div>
+                                                </div> --}}
                                                 <div class="card__post__title">
                                                     <h5>
                                                         <a href="{{ route('news-details', $slider->slug) }}">
@@ -80,7 +83,11 @@
                                                         </li> --}}
                                                         <li class="list-inline-item">
                                                             <span>
-                                                                {{ date('M d, Y', strtotime($slider->created_at)) }}
+                                                                @if (session('language') === 'bn')
+                                                                    {{ convertToFullBanglaDate($slider->created_at) }}
+                                                                @else
+                                                                    {{ date('M d, Y', strtotime($slider->created_at)) }}
+                                                                @endif
                                                             </span>
                                                         </li>
                                                     </ul>

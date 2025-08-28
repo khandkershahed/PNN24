@@ -20,9 +20,9 @@
                                                             alt="">
                                                     </a>
                                                     <div class="card__post__content bg__post-cover">
-                                                        <div class="card__post__category">
+                                                        {{-- <div class="card__post__category">
                                                             {{ $news->category->name }}
-                                                        </div>
+                                                        </div> --}}
                                                         <div class="card__post__title">
                                                             <h5>
                                                                 <a href="{{ route('news-details', $news->slug) }}">
@@ -39,7 +39,11 @@
                                                         </li> --}}
                                                                 <li class="list-inline-item">
                                                                     <span>
-                                                                        {{ date('M d, Y', strtotime($news->created_at)) }}
+                                                                        @if (session('language') === 'bn')
+                                                                            {{ convertToFullBanglaDate($news->created_at) }}
+                                                                        @else
+                                                                            {{ date('M d, Y', strtotime($news->created_at)) }}
+                                                                        @endif
                                                                     </span>
                                                                 </li>
                                                             </ul>
@@ -81,7 +85,11 @@
                                                                 </li> --}}
                                                                         <li class="list-inline-item">
                                                                             <span class="text-dark text-capitalize">
-                                                                                {{ date('M d, Y', strtotime($news->created_at)) }}
+                                                                                @if (session('language') === 'bn')
+                                                                                    {{ convertToFullBanglaDate($news->created_at) }}
+                                                                                @else
+                                                                                    {{ date('M d, Y', strtotime($news->created_at)) }}
+                                                                                @endif
                                                                             </span>
                                                                         </li>
 
@@ -130,7 +138,11 @@
                                                                 </li> --}}
                                                                         <li class="list-inline-item">
                                                                             <span class="text-dark text-capitalize">
-                                                                                {{ date('M d, Y', strtotime($news->created_at)) }}
+                                                                                @if (session('language') === 'bn')
+                                                                                    {{ convertToFullBanglaDate($news->created_at) }}
+                                                                                @else
+                                                                                    {{ date('M d, Y', strtotime($news->created_at)) }}
+                                                                                @endif
                                                                             </span>
                                                                         </li>
 
@@ -171,9 +183,9 @@
                                                     {{ ++$loop->index }}
                                                 </span>
                                             </div>
-                                            <a href="#" class="category">
+                                            {{-- <a href="#" class="category">
                                                 {{ $popularNews->category->name }}
-                                            </a>
+                                            </a> --}}
                                             <ul class="list-inline">
                                                 <li class="list-inline-item">
                                                     <h5>
@@ -227,7 +239,11 @@
                                         </li> --}}
                                             <li class="list-inline-item">
                                                 <span>
-                                                    {{ date('M d, Y', strtotime($sectionOneNews->created_at)) }}
+                                                    @if (session('language') === 'bn')
+                                                        {{ convertToFullBanglaDate($sectionOneNews->created_at) }}
+                                                    @else
+                                                        {{ date('M d, Y', strtotime($sectionOneNews->created_at)) }}
+                                                    @endif
                                                 </span>
                                             </li>
 
@@ -281,7 +297,11 @@
                                         </li> --}}
                                             <li class="list-inline-item">
                                                 <span>
-                                                    {{ date('M d, Y', strtotime($sectionTwoNews->created_at)) }}
+                                                    @if (session('language') === 'bn')
+                                                        {{ convertToFullBanglaDate($sectionTwoNews->created_at) }}
+                                                    @else
+                                                        {{ date('M d, Y', strtotime($sectionTwoNews->created_at)) }}
+                                                    @endif
                                                 </span>
                                             </li>
 
@@ -338,8 +358,11 @@
                                                             </li> --}}
                                                             <li class="list-inline-item">
                                                                 <span>
-
-                                                                    {{ date('M d, Y', strtotime($sectionThreeNews->created_at)) }}
+                                                                    @if (session('language') === 'bn')
+                                                                        {{ convertToFullBanglaDate($sectionThreeNews->created_at) }}
+                                                                    @else
+                                                                        {{ date('M d, Y', strtotime($sectionThreeNews->created_at)) }}
+                                                                    @endif
                                                                 </span>
                                                             </li>
 
@@ -380,8 +403,11 @@
                                                             </li> --}}
                                                             <li class="list-inline-item">
                                                                 <span>
-
-                                                                    {{ date('M d, Y', strtotime($sectionThreeNews->created_at)) }}
+                                                                    @if (session('language') === 'bn')
+                                                                        {{ convertToFullBanglaDate($sectionThreeNews->created_at) }}
+                                                                    @else
+                                                                        {{ date('M d, Y', strtotime($sectionThreeNews->created_at)) }}
+                                                                    @endif
                                                                 </span>
                                                             </li>
 
@@ -433,9 +459,9 @@
                                             <div class="col-md-7 my-auto pl-0">
                                                 <div class="card__post__body ">
                                                     <div class="card__post__content  ">
-                                                        <div class="card__post__category ">
+                                                        {{-- <div class="card__post__category ">
                                                             {{ $sectionFourNews->category->name }}
-                                                        </div>
+                                                        </div> --}}
                                                         <div class="card__post__author-info mb-2">
                                                             <ul class="list-inline">
                                                                 {{-- <li class="list-inline-item">
@@ -445,8 +471,11 @@
                                                                     </li> --}}
                                                                 <li class="list-inline-item">
                                                                     <span class="text-dark text-capitalize">
-
-                                                                        {{ date('M d, Y', strtotime($sectionFourNews->created_at)) }}
+                                                                        @if (session('language') === 'bn')
+                                                                            {{ convertToFullBanglaDate($sectionFourNews->created_at) }}
+                                                                        @else
+                                                                            {{ date('M d, Y', strtotime($sectionFourNews->created_at)) }}
+                                                                        @endif
                                                                     </span>
                                                                 </li>
                                                             </ul>
@@ -493,9 +522,9 @@
                                                     </a>
                                                 </div>
                                                 <div class="article__content">
-                                                    <div class="article__category">
+                                                    {{-- <div class="article__category">
                                                         {{ $mostViewedNews->category->name }}
-                                                    </div>
+                                                    </div> --}}
                                                     <ul class="list-inline">
                                                         {{-- <li class="list-inline-item">
                                                         <span class="text-primary">
@@ -504,7 +533,11 @@
                                                     </li> --}}
                                                         <li class="list-inline-item">
                                                             <span class="text-dark text-capitalize">
-                                                                {{ date('M d, Y', strtotime($mostViewedNews->created_at)) }}
+                                                                @if (session('language') === 'bn')
+                                                                    {{ convertToFullBanglaDate($mostViewedNews->created_at) }}
+                                                                @else
+                                                                    {{ date('M d, Y', strtotime($mostViewedNews->created_at)) }}
+                                                                @endif
                                                             </span>
                                                         </li>
 
@@ -549,7 +582,11 @@
                                                                     </li> --}}
                                                                     <li class="list-inline-item">
                                                                         <span class="text-dark text-capitalize">
-                                                                            {{ date('M d, Y', strtotime($mostViewedNews->created_at)) }}
+                                                                            @if (session('language') === 'bn')
+                                                                                {{ convertToFullBanglaDate($mostViewedNews->created_at) }}
+                                                                            @else
+                                                                                {{ date('M d, Y', strtotime($mostViewedNews->created_at)) }}
+                                                                            @endif
                                                                         </span>
                                                                     </li>
 

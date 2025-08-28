@@ -129,3 +129,37 @@ function checkPermission(string $permission)
 {
     return auth()->guard('admin')->user()->hasPermissionTo($permission);
 }
+
+function convertToFullBanglaDate($englishDate)
+{
+    $bnDigits = ['০', '১', '২', '৩', '৪', '৫', '৬', '৭', '৮', '৯'];
+    $enDigits = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+
+    $months = [
+        'January' => 'জানুয়ারি',
+        'February' => 'ফেব্রুয়ারি',
+        'March' => 'মার্চ',
+        'April' => 'এপ্রিল',
+        'May' => 'মে',
+        'June' => 'জুন',
+        'July' => 'জুলাই',
+        'August' => 'আগস্ট',
+        'September' => 'সেপ্টেম্বর',
+        'October' => 'অক্টোবর',
+        'November' => 'নভেম্বর',
+        'December' => 'ডিসেম্বর',
+    ];
+
+    // Convert the input date
+    $timestamp = strtotime($englishDate);
+    $day = date('d', $timestamp);          // e.g., 28
+    $month = date('F', $timestamp);        // e.g., August
+    $year = date('Y', $timestamp);         // e.g., 2025
+
+    // Translate to Bangla
+    $banglaDay = str_replace($enDigits, $bnDigits, $day);
+    $banglaYear = str_replace($enDigits, $bnDigits, $year);
+    $banglaMonth = $months[$month] ?? $month;
+
+    return $banglaDay . ' ' . $banglaMonth . ', ' . $banglaYear;
+}
