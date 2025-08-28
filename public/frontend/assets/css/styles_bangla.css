@@ -10730,6 +10730,7 @@ a.text-dark:focus {
     -ms-user-select: none;
     user-select: none;
     touch-action: pan-y;
+    overflow-x: hidden;
     -webkit-tap-highlight-color: transparent
 }
 
