@@ -4,6 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="csrf-token" content="{{ csrf_token() }}" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1542066572531693"
+        crossorigin="anonymous"></script>
     <title>
         @hasSection('title')
             @yield('title')
@@ -80,8 +82,7 @@
         }
     </style>
 
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1542066572531693"
-        crossorigin="anonymous"></script>
+
 </head>
 
 <body>
