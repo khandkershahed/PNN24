@@ -6,6 +6,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}" />
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1542066572531693"
         crossorigin="anonymous"></script>
+    <meta name="google-adsense-account" content="ca-pub-1542066572531693">
     <title>
         @hasSection('title')
             @yield('title')
