@@ -118,9 +118,9 @@
 
                                                     <td>
                                                         <a href="{{ route('admin.news.edit', $item->id) }}"
-                                                            class="btn btn-primary"><i class="fas fa-edit"></i></a>
+                                                            class="btn btn-primary mb-2"><i class="fas fa-edit"></i></a>
                                                         <a href="{{ route('admin.news.destroy', $item->id) }}"
-                                                            class="btn btn-danger delete-item"><i
+                                                            class="btn btn-danger delete-item mb-2"><i
                                                                 class="fas fa-trash-alt"></i></a>
                                                         <a href="{{ route('admin.news-copy', $item->id) }}"
                                                             class="btn btn-primary"><i class="fas fa-copy"></i></i></a>
